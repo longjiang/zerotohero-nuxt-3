@@ -5,21 +5,19 @@ class DictionaryFactory {
         let Dictionary;
         switch (l2.code) {
             case 'zh':
-                importScripts('/js/hsk-cedict-dictionary.js')
+                if (typeof HskCedictDictionary === 'undefined') importScripts('/js/hsk-cedict-dictionary.js')
                 Dictionary = HskCedictDictionary;
                 break;
             case 'ja':
-                importScripts('/js/edict-dictionary.js')
+                if (typeof EdictDictionary === 'undefined') importScripts('/js/edict-dictionary.js')
                 Dictionary = EdictDictionary;
                 break;
             default:
-                importScripts('/js/wiktionary-csv-dictionary.js')
+              if (typeof WiktionaryCsvDictionary === 'undefined') importScripts('/js/wiktionary-csv-dictionary.js')
                 Dictionary = WiktionaryCsvDictionary;
         }
 
-        console.log("Loading dictionary...", Dictionary);
-        const dictionary = Dictionary.load({l1, l2});
-        console.log("Dictionary loaded.", dictionary);
-        return dictionary;
+        const dictionaryPromise = Dictionary.load({l1, l2});
+        return dictionaryPromise;
     }
 }

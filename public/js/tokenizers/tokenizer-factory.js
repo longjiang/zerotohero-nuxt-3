@@ -78,7 +78,7 @@ const TokenizerFactory = {
     // Construct the tokenizer file path and import it
     const tokenizerFile = `../js/tokenizers/${tokenizer.replace('Tokenizer', '').toLowerCase()}-tokenizer.js`;
     console.log('Initialize tokenizer: ', tokenizer);
-    importScripts(tokenizerFile);
+    if (typeof self[tokenizer] === 'undefined') importScripts(tokenizerFile);
 
     // Initialize the tokenizer class
     const TokenizerClass = tokenizer === 'BaseTokenizer' ? BaseTokenizer : eval(tokenizer);

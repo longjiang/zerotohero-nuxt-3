@@ -14,6 +14,7 @@ export default defineNuxtPlugin(nuxtApp => {
             l2 = JSON.parse(JSON.stringify(l2));
             const link = Comlink.wrap(workerInstance);
             dictionaryService = await new link(l1, l2);
+            console.log('dictionaryService', dictionaryService);
         }
     };
 

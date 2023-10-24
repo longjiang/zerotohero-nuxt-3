@@ -18,10 +18,7 @@ onMounted(async () => {
   const l1 = languagesStore.getLanguageByCode('en'); // Get the language by code 'en'
   const l2 = languagesStore.getLanguageByCode('zh'); // Example: Get another language by code 'zh'
 
-  // Use l1 and l2 as needed here...
-  console.log(l1, l2);
-
   const dictionary = await nuxtApp.$getDictionary(l1, l2);
-  console.log(dictionary);
+  console.log('hsdfsjf', await dictionary.lookupBySearch('你好'));
 });
 </script>
