@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
-    "papaparse": "^5.4.1"
+    "comlink": "^4.4.1",
+    "papaparse": "^5.4.1",
+    "worker-loader": "^3.0.8"
   }
 }
