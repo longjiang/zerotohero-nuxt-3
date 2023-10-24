@@ -2,8 +2,8 @@ importScripts('/vendor/comlink/comlink.min.js');
 importScripts('/js/dictionary-factory.js')
 
 class DictionaryService {
-  constructor(l2) {
-    this.dictionary = DictionaryFactory.createDictionary(l2)
+  constructor(l1, l2) {
+    this.dictionary = DictionaryFactory.createDictionary(l1, l2)
     // Dynamically create a proxy method for each method of the dictionary
     for (let key of Object.getOwnPropertyNames(
       Object.getPrototypeOf(this.dictionary)

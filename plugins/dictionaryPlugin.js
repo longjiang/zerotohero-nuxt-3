@@ -8,16 +8,18 @@ if (!import.meta.env.SSR) {
 export default defineNuxtPlugin(nuxtApp => {
     let dictionaryService = null;
 
-    const initWorker = async (l2) => {
+    const initWorker = async (l1, l2) => {
         if (!import.meta.env.SSR) {
+            l1 = JSON.parse(JSON.stringify(l1));
+            l2 = JSON.parse(JSON.stringify(l2));
             const link = Comlink.wrap(workerInstance);
-            dictionaryService = await new link(l2);
+            dictionaryService = await new link(l1, l2);
         }
     };
 
-    const getDictionary = async (l2) => {
+    const getDictionary = async (l1, l2) => {
         if (!dictionaryService) {
-            await initWorker(l2);
+            await initWorker(l1, l2);
         }
         return dictionaryService;
     };

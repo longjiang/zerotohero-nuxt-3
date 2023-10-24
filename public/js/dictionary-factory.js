@@ -1,9 +1,9 @@
 importScripts('/js/base-dictionary.js')
 console.log('hi')
 class DictionaryFactory {
-    static createDictionary(l2) {
+    static createDictionary(l1, l2) {
         let Dictionary;
-        switch (l2) {
+        switch (l2.code) {
             case 'zh':
                 importScripts('/js/hsk-cedict-dictionary.js')
                 Dictionary = HskCedictDictionary;
@@ -18,7 +18,7 @@ class DictionaryFactory {
         }
 
         console.log("Loading dictionary...", Dictionary);
-        const dictionary = Dictionary.load();
+        const dictionary = Dictionary.load({l1, l2});
         console.log("Dictionary loaded.", dictionary);
         return dictionary;
     }
