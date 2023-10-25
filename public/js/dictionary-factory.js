@@ -1,5 +1,5 @@
 importScripts('/js/base-dictionary.js')
-console.log('hi')
+
 class DictionaryFactory {
     static createDictionary(l1, l2) {
         let Dictionary;

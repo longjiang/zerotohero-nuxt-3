@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>Welcome to the homepage</h1>
+    <TokenizedText text="你好吗？" />
   </div>
 </template>
