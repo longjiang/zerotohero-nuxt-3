@@ -65,7 +65,7 @@ onMounted(async () => {
   await languagesStore.loadLanguages();
 
   const l1 = languagesStore.getLanguageByCode('en'); // Get the language by code 'en'
-  const l2 = languagesStore.getLanguageByCode('zh'); // Example: Get another language by code 'zh'
+  const l2 = languagesStore.getLanguageByCode('nl'); // Example: Get another language by code 'zh'
 
   dictionary.value = await nuxtApp.$getDictionary(l1, l2); // Assign to the ref here
 

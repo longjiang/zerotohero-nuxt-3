@@ -1,5 +1,5 @@
 <template>
   <div>
-    <TokenizedText text="在繁忙的城市中心，有一个小而宁静的公园隐藏在高楼大厦之间。家庭在绿色的草坪上享受野餐，而孩子们在闪 shimmer 的池塘附近欢笑玩耍。鸟儿在树上悠扬地歌唱，它们的歌声与远处的交通嗡嗡声融为一体。老年夫妇手牵手地漫步，享受着都市混乱中的宁静。当太阳落到地平线以下时，公园变成了一个宁静的绿洲，其美丽证明了自然在现代世界中的持久存在。" />
+    <TokenizedText text="In het hart van de bruisende stad ligt een klein en rustig park verscholen tussen de hoge gebouwen. Families genieten van een picknick op het groene gras, terwijl kinderen lachend spelen bij een glinsterende vijver. Vogels zingen hun liederen hoog in de bomen, hun melodieën vermengend met het verre geroezemoes van het verkeer. Oudere koppels wandelen hand in hand, genietend van de rust te midden van de stedelijke drukte. Wanneer de zon ondergaat, blijft het park een vredige oase, een getuigenis van de blijvende aanwezigheid van de natuur in de moderne wereld." />
   </div>
 </template>
